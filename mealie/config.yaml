@@ -1,0 +1,62 @@
+name: "Mealie"
+description: "Zelf-gehoste receptenmanager met meal planning en boodschappenlijst."
+version: "3.17.0"
+slug: "mealie"
+init: false
+homeassistant_api: false
+auth_api: false
+url: "https://mealie.io/"
+
+arch:
+  - aarch64
+  - amd64
+  - armv7
+
+startup: services
+boot: auto
+host_network: false
+
+ports:
+  9000/tcp: 9000
+
+ports_description:
+  9000/tcp: "Mealie web interface"
+
+map:
+  - share:rw
+
+ingress: true
+ingress_port: 9000
+ingress_stream: true
+panel_icon: mdi:silverware-fork-knife
+panel_admin: true
+
+options:
+  data_dir: "/share/mealie"
+  base_url: ""
+  allow_signup: false
+  visible_for_all_users: false
+  default_email: "changeme@example.com"
+  default_password: "changeme"
+  oidc_auth_enabled: false
+  oidc_configuration_url: ""
+  oidc_client_id: ""
+  oidc_client_secret: ""
+  oidc_provider_name: "SSO"
+  oidc_signup_enabled: true
+  oidc_auto_redirect: false
+
+schema:
+  data_dir: str
+  base_url: str
+  allow_signup: bool
+  visible_for_all_users: bool
+  default_email: str
+  default_password: str
+  oidc_auth_enabled: bool
+  oidc_configuration_url: str
+  oidc_client_id: str
+  oidc_client_secret: str
+  oidc_provider_name: str
+  oidc_signup_enabled: bool
+  oidc_auto_redirect: bool

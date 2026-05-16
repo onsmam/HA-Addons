@@ -1,0 +1,39 @@
+name: "Mosquitto Custom Config"
+description: "Eclipse Mosquitto MQTT broker. Plaats je eigen mosquitto.conf in /config/mosquitto/."
+version: "2.0.21"
+slug: "mosquitto_custom"
+init: false
+homeassistant_api: false
+auth_api: false
+url: "https://github.com/onsmam/HA-Addons"
+
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+
+startup: services
+boot: auto
+host_network: true
+
+ports:
+  1883/tcp: 1883
+  8883/tcp: 8883
+  9001/tcp: 9001
+
+ports_description:
+  1883/tcp: "MQTT (plaintext)"
+  8883/tcp: "MQTT over TLS"
+  9001/tcp: "MQTT over WebSockets"
+
+map:
+  - config:rw
+  - share:rw
+
+options:
+  config_path: "/share/mosquitto/mosquitto.conf"
+
+schema:
+  config_path: str

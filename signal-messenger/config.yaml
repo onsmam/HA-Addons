@@ -1,0 +1,38 @@
+name: "Signal Messenger"
+description: "Signal Messenger REST API voor Home Assistant, gebaseerd op signal-cli-rest-api door bbernhard."
+version: "0.99"
+slug: "signal_messenger"
+init: false
+homeassistant_api: false
+auth_api: false
+url: "https://github.com/bbernhard/signal-cli-rest-api"
+
+arch:
+  - aarch64
+  - amd64
+  - armv7
+
+startup: services
+boot: auto
+host_network: false
+
+ports:
+  8080/tcp: 8080
+
+ports_description:
+  8080/tcp: "Signal REST API"
+
+map:
+  - addon_config:rw
+
+options:
+  mode: "native"
+  auto_receive: true
+  cmd_timeout: 60
+  log_level: "info"
+
+schema:
+  mode: list(normal|native|json-rpc|json-rpc-native)
+  auto_receive: bool
+  cmd_timeout: int
+  log_level: list(debug|info|warn|error)

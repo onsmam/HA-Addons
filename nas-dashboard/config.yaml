@@ -1,0 +1,36 @@
+name: "NAS Dashboard"
+description: "Persoonlijk NAS dashboard - statische webpagina geserveerd via Nginx vanuit share/nasdashboard/."
+version: "1.2.0"
+slug: "nas_dashboard"
+init: false
+homeassistant_api: false
+auth_api: false
+url: "https://github.com/onsmam/HA-Addons"
+
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+
+startup: services
+boot: auto
+host_network: false
+
+ports:
+  8081/tcp: 8081
+
+ports_description:
+  8081/tcp: "NAS Dashboard web interface"
+
+map:
+  - share:rw
+
+ingress: true
+ingress_port: 8081
+panel_icon: mdi:view-dashboard
+panel_admin: false
+
+options: {}
+schema: {}
