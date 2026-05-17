@@ -1,6 +1,6 @@
 name: "Mealie"
 description: "Zelf-gehoste receptenmanager met meal planning en boodschappenlijst."
-version: "3.17.1"
+version: "3.17.2"
 slug: "mealie"
 init: false
 homeassistant_api: false
@@ -24,11 +24,6 @@ ports_description:
 
 map:
   - share:rw
-
-ingress: true
-ingress_port: 8099
-panel_icon: mdi:silverware-fork-knife
-panel_admin: true
 
 options:
   data_dir: "/share/mealie"
