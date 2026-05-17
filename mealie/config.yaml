@@ -25,12 +25,6 @@ ports_description:
 map:
   - share:rw
 
-ingress: true
-ingress_port: 9000
-ingress_stream: true
-panel_icon: mdi:silverware-fork-knife
-panel_admin: true
-
 options:
   data_dir: "/share/mealie"
   base_url: ""
