@@ -42,13 +42,18 @@ providers:
       foldersFromFilesStructure: true
 YAML
 
-if [ ! "$(ls -A ${SHARE_DIR}/dashboards 2>/dev/null)" ]; then
-    echo "[teslamate-grafana] Dashboards downloaden..."
-    BASE_URL="https://raw.githubusercontent.com/adriankumpf/teslamate/master/grafana/dashboards"
-    for DASH in battery-health charging-details charging-stats charge-level drive-details drives efficiency mileage projected-range states updates vampire-drain visited-geofences overview; do
-        curl -sS -o "${SHARE_DIR}/dashboards/${DASH}.json" "${BASE_URL}/${DASH}.json" 2>/dev/null || true
-    done
-fi
+echo "[teslamate-grafana] Dashboards controleren en downloaden..."
+BASE_URL="https://raw.githubusercontent.com/teslamate-org/teslamate/master/grafana/dashboards"
+for DASH in battery-health charging-details charging-stats charge-level drive-details drives efficiency mileage projected-range states updates vampire-drain visited-geofences overview; do
+    DASH_FILE="${SHARE_DIR}/dashboards/${DASH}.json"
+    if [ ! -f "${DASH_FILE}" ] || ! jq -e '.title' "${DASH_FILE}" > /dev/null 2>&1; then
+        echo "[teslamate-grafana] Downloaden: ${DASH}.json"
+        curl -sS -o "${DASH_FILE}.tmp" "${BASE_URL}/${DASH}.json" 2>/dev/null && \
+        jq -e '.title' "${DASH_FILE}.tmp" > /dev/null 2>&1 && \
+        mv "${DASH_FILE}.tmp" "${DASH_FILE}" || \
+        rm -f "${DASH_FILE}.tmp"
+    fi
+done
 
 export GF_PATHS_DATA="${SHARE_DIR}/data"
 export GF_PATHS_LOGS="${SHARE_DIR}/logs"
