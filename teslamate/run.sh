@@ -33,5 +33,7 @@ cd /opt/app
 echo "[teslamate] Database migreren..."
 bin/teslamate eval "TeslaMate.Release.migrate()"
 
+echo "[teslamate] MQTT_HOME_ASSISTANT_DISCOVERY=${MQTT_HOME_ASSISTANT_DISCOVERY}"
+echo "[teslamate] MQTT_HOME_ASSISTANT_DISCOVERY_PREFIX=${MQTT_HOME_ASSISTANT_DISCOVERY_PREFIX}"
 echo "[teslamate] Starten..."
 exec /entrypoint.sh bin/teslamate start
