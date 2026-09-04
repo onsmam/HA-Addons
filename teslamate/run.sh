@@ -17,6 +17,10 @@ export VIRTUAL_HOST=localhost
 export CHECK_ORIGIN=false
 export PORT=4000
 
-echo "[teslamate] Starten..."
 cd /opt/app
+
+echo "[teslamate] Database migreren..."
+bin/teslamate eval "TeslaMate.Release.migrate()"
+
+echo "[teslamate] Starten..."
 exec /entrypoint.sh bin/teslamate start
