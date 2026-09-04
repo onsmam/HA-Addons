@@ -10,7 +10,6 @@ url: "https://github.com/bbernhard/signal-cli-rest-api"
 arch:
   - aarch64
   - amd64
-  - armv7
 
 startup: services
 boot: auto
@@ -23,7 +22,7 @@ ports_description:
   8080/tcp: "Signal REST API"
 
 map:
-  - addon_config:rw
+  - app_config:rw
 
 options:
   mode: "native"
