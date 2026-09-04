@@ -10,7 +10,7 @@ export MODE="${MODE}"
 export AUTO_RECEIVE="${AUTO_RECEIVE}"
 export SIGNAL_CLI_CMD_TIMEOUT="${CMD_TIMEOUT}"
 export LOG_LEVEL="${LOG_LEVEL}"
-export SIGNAL_CLI_CONFIG_DIR="/addon_configs/signal_messenger"
+export SIGNAL_CLI_CONFIG_DIR="/config"
 export PORT="8080"
 
 echo "[signal-messenger] Starten in ${MODE} modus"
