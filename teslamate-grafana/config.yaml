@@ -1,6 +1,6 @@
 name: "Teslamate Grafana"
 description: "Grafana dashboards voor Teslamate. Vereist de Teslamate Database addon."
-version: "11.2.0"
+version: "4.2.0"
 slug: "teslamate_grafana"
 init: false
 homeassistant_api: false
@@ -27,9 +27,7 @@ map:
 options:
   db_password: "teslamate"
   admin_password: "admin"
-  teslamate_version: "v4.2.0"
 
 schema:
   db_password: str
   admin_password: str
-  teslamate_version: str
