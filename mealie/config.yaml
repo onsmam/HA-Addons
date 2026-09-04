@@ -1,6 +1,6 @@
 name: "Mealie"
 description: "Zelf-gehoste receptenmanager met meal planning en boodschappenlijst."
-version: "3.17.2"
+version: "3.25.1"
 slug: "mealie"
 init: false
 homeassistant_api: false

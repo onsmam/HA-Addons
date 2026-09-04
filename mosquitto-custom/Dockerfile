@@ -1,4 +1,4 @@
-FROM eclipse-mosquitto:2.0.21
+FROM eclipse-mosquitto:2.1.2
 
 RUN apk add --no-cache jq
 

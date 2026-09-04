@@ -1,6 +1,6 @@
 name: "Mosquitto Custom Config"
 description: "Eclipse Mosquitto MQTT broker. Plaats je eigen mosquitto.conf in /config/mosquitto/."
-version: "2.0.21"
+version: "2.1.2"
 slug: "mosquitto_custom"
 init: false
 homeassistant_api: false

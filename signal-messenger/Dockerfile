@@ -1,4 +1,4 @@
-FROM bbernhard/signal-cli-rest-api:0.99
+FROM bbernhard/signal-cli-rest-api:0.100
 
 RUN apt-get update && apt-get install -y --no-install-recommends jq && rm -rf /var/lib/apt/lists/*
 

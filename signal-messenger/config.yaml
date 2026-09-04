@@ -1,6 +1,6 @@
 name: "Signal Messenger"
 description: "Signal Messenger REST API voor Home Assistant, gebaseerd op signal-cli-rest-api door bbernhard."
-version: "0.99"
+version: "0.100"
 slug: "signal_messenger"
 init: false
 homeassistant_api: false
