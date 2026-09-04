@@ -18,4 +18,4 @@ export CHECK_ORIGIN=false
 export PORT=4000
 
 echo "[teslamate] Starten..."
-exec /app/bin/teslamate start
+exec /opt/app/bin/teslamate start
