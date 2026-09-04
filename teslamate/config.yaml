@@ -29,9 +29,11 @@ options:
   db_password: "teslamate"
   mqtt_host: "localhost"
   mqtt_port: 1883
+  grafana_url: "http://homeassistant.local:3001"
 
 schema:
   encryption_key: str
   db_password: str
   mqtt_host: str
   mqtt_port: int
+  grafana_url: str
