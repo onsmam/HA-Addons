@@ -1,4 +1,4 @@
-# HA Addons by onsmam
+# HA Addons
 
 Persoonlijke Home Assistant addon repository.
 
@@ -6,14 +6,23 @@ Persoonlijke Home Assistant addon repository.
 
 ## Addons
 
-### 🦟 Mosquitto Custom Config
+### Mosquitto Custom Config
 Eclipse Mosquitto MQTT broker met je eigen `mosquitto.conf`. Configuratie en persistence opgeslagen in `share/mosquitto/`.
 
-### 🍴 Mealie
+### Mealie
 Zelf-gehoste receptenmanager met meal planning en boodschappenlijst. Ondersteunt OIDC/SSO.
 
-### 📡 Signal Messenger
+### Signal Messenger
 Signal Messenger REST API voor gebruik in HA automations. Gebaseerd op [signal-cli-rest-api](https://github.com/bbernhard/signal-cli-rest-api) door [@bbernhard](https://github.com/bbernhard).
 
-### 🖥️ NAS Dashboard
-Persoonlijk statisch dashboard geserveerd via Nginx. Bestanden plaatsen in `share/nasdashboard/` via Samba.
+### NAS Dashboard
+Statisch dashboard geserveerd via Nginx. Bestanden plaatsen in `share/nasdashboard/`.
+
+### Teslamate Database
+PostgreSQL database voor Teslamate. Data opgeslagen in `share/teslamate/db/`. Start deze addon als eerste.
+
+### Teslamate
+Zelf-gehoste Tesla data logger. Verbindt met de Teslamate Database addon en een MQTT broker. Bereikbaar op poort 4000.
+
+### Teslamate Grafana
+Grafana dashboards voor Teslamate. Verbindt met de Teslamate Database addon. Bereikbaar op poort 3000.
