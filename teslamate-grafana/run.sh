@@ -8,6 +8,8 @@ SHARE_DIR="/share/teslamate/grafana"
 mkdir -p "${SHARE_DIR}/data" "${SHARE_DIR}/logs" "${SHARE_DIR}/plugins"
 mkdir -p "${SHARE_DIR}/provisioning/datasources"
 mkdir -p "${SHARE_DIR}/provisioning/dashboards"
+mkdir -p "${SHARE_DIR}/provisioning/plugins"
+mkdir -p "${SHARE_DIR}/provisioning/alerting"
 mkdir -p "${SHARE_DIR}/dashboards"
 
 chown -R 472:0 "${SHARE_DIR}"
@@ -53,7 +55,7 @@ export GF_PATHS_LOGS="${SHARE_DIR}/logs"
 export GF_PATHS_PLUGINS="${SHARE_DIR}/plugins"
 export GF_PATHS_PROVISIONING="${SHARE_DIR}/provisioning"
 export GF_SECURITY_ADMIN_PASSWORD="${ADMIN_PASSWORD}"
-export GF_SERVER_HTTP_PORT=3000
+export GF_SERVER_HTTP_PORT=3001
 export GF_ANALYTICS_REPORTING_ENABLED=false
 export GF_SECURITY_ALLOW_EMBEDDING=true
 
