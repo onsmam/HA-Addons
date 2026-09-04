@@ -15,7 +15,7 @@ export DATABASE_NAME=teslamate
 export MQTT_HOST="${MQTT_HOST}"
 export MQTT_PORT="${MQTT_PORT}"
 export GRAFANA_URL="${GRAFANA_URL}"
-export VIRTUAL_HOST=localhost
+export VIRTUAL_HOST=0.0.0.0
 export CHECK_ORIGIN=false
 export PORT=4000
 
