@@ -30,6 +30,9 @@ options:
   mqtt_host: "localhost"
   mqtt_port: 1883
   grafana_url: "http://homeassistant.local:3001"
+  mqtt_ha_discovery: true
+  mqtt_ha_discovery_url: "http://homeassistant.local:4000"
+  mqtt_ha_discovery_prefix: "homeassistant"
 
 schema:
   encryption_key: str
@@ -37,3 +40,6 @@ schema:
   mqtt_host: str
   mqtt_port: int
   grafana_url: str
+  mqtt_ha_discovery: bool
+  mqtt_ha_discovery_url: str
+  mqtt_ha_discovery_prefix: str
