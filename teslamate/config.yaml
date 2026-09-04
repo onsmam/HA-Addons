@@ -1,5 +1,5 @@
 name: "Teslamate"
-description: "Self-hosted Tesla data logger. Vereist de Teslamate Database addon."
+description: "Self-hosted Tesla data logger met PostgreSQL en Grafana ingebouwd."
 version: "1.33.0"
 slug: "teslamate"
 init: false
@@ -13,13 +13,15 @@ arch:
 
 startup: services
 boot: auto
-host_network: true
+host_network: false
 
 ports:
   4000/tcp: 4000
+  3000/tcp: 3000
 
 ports_description:
   4000/tcp: "Teslamate web interface"
+  3000/tcp: "Grafana dashboards"
 
 map:
   - share:rw
@@ -27,11 +29,13 @@ map:
 options:
   encryption_key: "verander-dit-naar-een-geheim"
   db_password: "teslamate"
-  mqtt_host: "localhost"
+  mqtt_host: "192.168.1.80"
   mqtt_port: 1883
+  grafana_password: "admin"
 
 schema:
   encryption_key: str
   db_password: str
   mqtt_host: str
   mqtt_port: int
+  grafana_password: str
