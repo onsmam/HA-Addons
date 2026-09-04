@@ -43,7 +43,7 @@ providers:
 YAML
 
 echo "[teslamate-grafana] Dashboards controleren en downloaden..."
-BASE_URL="https://raw.githubusercontent.com/teslamate-org/teslamate/master/grafana/dashboards"
+BASE_URL="https://raw.githubusercontent.com/teslamate-org/teslamate/main/grafana/dashboards"
 for DASH in battery-health charging-details charging-stats charge-level drive-details drives efficiency mileage projected-range states updates vampire-drain visited-geofences overview; do
     DASH_FILE="${SHARE_DIR}/dashboards/${DASH}.json"
     if [ ! -f "${DASH_FILE}" ] || ! jq -e '.title' "${DASH_FILE}" > /dev/null 2>&1; then
