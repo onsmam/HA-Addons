@@ -23,4 +23,7 @@ export GF_ANALYTICS_REPORTING_ENABLED=false
 export GF_SECURITY_ALLOW_EMBEDDING=true
 
 echo "[teslamate-grafana] Grafana starten..."
-exec /entrypoint.sh
+exec grafana server \
+    --homepath=/usr/share/grafana \
+    --config=/etc/grafana/grafana.ini \
+    --packaging=docker
