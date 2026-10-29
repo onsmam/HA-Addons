@@ -1,6 +1,6 @@
 name: "AirTrail"
 description: "Persoonlijke vluchten-tracker. Gebruikt de PostgreSQL van de Teslamate Database addon."
-version: "3.13.1"
+version: "3.13.1-1"
 slug: "airtrail"
 init: false
 homeassistant_api: false
