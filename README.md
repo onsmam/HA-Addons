@@ -26,3 +26,6 @@ Zelf-gehoste Tesla data logger. Verbindt met de Teslamate Database addon en een 
 
 ### Teslamate Grafana
 Grafana dashboards voor Teslamate. Verbindt met de Teslamate Database addon. Bereikbaar op poort 3000.
+
+### AirTrail
+Persoonlijke vluchten-tracker. Gebruikt de PostgreSQL van de Teslamate Database addon met een eigen database en user (`airtrail`). Uploads in `share/airtrail/uploads/`. Bereikbaar op poort 3000 (instelbaar).

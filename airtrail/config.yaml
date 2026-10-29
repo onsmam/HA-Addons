@@ -1,0 +1,31 @@
+name: "AirTrail"
+description: "Persoonlijke vluchten-tracker. Gebruikt de PostgreSQL van de Teslamate Database addon."
+version: "3.13.1"
+slug: "airtrail"
+init: false
+homeassistant_api: false
+auth_api: false
+url: "https://github.com/johanohly/AirTrail"
+
+arch:
+  - aarch64
+  - amd64
+
+startup: application
+boot: auto
+host_network: true
+
+map:
+  - share:rw
+
+options:
+  port: 3000
+  origin: "http://homeassistant.local:3000"
+  teslamate_db_password: "teslamate"
+  airtrail_db_password: "verander-dit-wachtwoord"
+
+schema:
+  port: port
+  origin: url
+  teslamate_db_password: password
+  airtrail_db_password: password
