@@ -1,4 +1,4 @@
-FROM johly/airtrail:v3.13.1
+FROM johly/airtrail:v3.14.0
 
 RUN apt-get update && apt-get install -y --no-install-recommends jq postgresql-client && rm -rf /var/lib/apt/lists/*
 
