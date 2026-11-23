@@ -1,6 +1,6 @@
 name: "Teslamate Database"
 description: "PostgreSQL database voor Teslamate. Start deze addon als eerste."
-version: "17.5"
+version: "17.12"
 slug: "teslamate_db"
 init: false
 homeassistant_api: false
