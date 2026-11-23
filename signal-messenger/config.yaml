@@ -26,12 +26,12 @@ map:
 
 options:
   mode: "native"
-  auto_receive: true
+  auto_receive_schedule: "0 22 * * *"
   cmd_timeout: 60
   log_level: "info"
 
 schema:
   mode: list(normal|native|json-rpc|json-rpc-native)
-  auto_receive: bool
+  auto_receive_schedule: str?
   cmd_timeout: int
   log_level: list(debug|info|warn|error)
