@@ -5,7 +5,7 @@ slug: "teslamate"
 init: false
 homeassistant_api: false
 auth_api: false
-url: "https://github.com/adriankumpf/teslamate"
+url: "https://github.com/teslamate-org/teslamate"
 
 arch:
   - aarch64
