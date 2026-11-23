@@ -1,6 +1,6 @@
 name: "Teslamate"
 description: "Self-hosted Tesla data logger. Vereist de Teslamate Database addon."
-version: "1.33.0"
+version: "4.5.0"
 slug: "teslamate"
 init: false
 homeassistant_api: false

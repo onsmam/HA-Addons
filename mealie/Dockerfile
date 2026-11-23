@@ -1,4 +1,4 @@
-FROM ghcr.io/mealie-recipes/mealie:v3.25.1
+FROM ghcr.io/mealie-recipes/mealie:v3.31.0
 
 RUN apt-get update && apt-get install -y --no-install-recommends jq && rm -rf /var/lib/apt/lists/*
 

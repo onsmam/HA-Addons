@@ -1,4 +1,4 @@
-FROM teslamate/grafana:latest
+FROM teslamate/grafana:4.5.0
 
 USER root
 RUN apk add --no-cache jq

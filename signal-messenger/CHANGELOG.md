@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.102
+- Update naar [bbernhard/signal-cli-rest-api v0.102](https://github.com/bbernhard/signal-cli-rest-api/releases/tag/0.102)
+
 ## 0.100
 - Update naar [bbernhard/signal-cli-rest-api v0.100](https://github.com/bbernhard/signal-cli-rest-api/releases/tag/0.100)
 
