@@ -35,9 +35,17 @@ notify:
 | Optie | Standaard | Beschrijving |
 |-------|-----------|--------------|
 | `mode` | `native` | Uitvoermodus (zie hieronder) |
-| `auto_receive` | `true` | Automatisch berichten ophalen |
-| `cmd_timeout` | `60` | Timeout in seconden per commando |
+| `auto_receive_schedule` | `0 22 * * *` | Cron-schema waarop berichten van de Signal-server worden opgehaald. Leeg laten = uit. Niet gebruikt in json-rpc modi |
+| `cmd_timeout` | `60` | Timeout in seconden per commando. Niet gebruikt in json-rpc modi |
 | `log_level` | `info` | Logniveau |
+
+### auto_receive_schedule
+
+signal-cli verwacht dat berichten regelmatig worden opgehaald; anders verschijnt in de log `Messages have been last received ... days ago`. Gebruik je de addon alleen om berichten te **versturen**, laat dit schema dan aan.
+
+> **Let op:** ontvang je berichten via de REST API (`/v1/receive`), zet dit dan uit (leeg laten). Het schema haalt berichten van de server op, waardoor ze niet meer via de API binnenkomen.
+
+In de json-rpc modi haalt signal-cli zelf continu berichten op; dit schema wordt daar genegeerd.
 
 ### Modi
 
